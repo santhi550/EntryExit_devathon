@@ -1,10 +1,104 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <title></title>
-    </head>
-    <body>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;background-color:rgb(25,40,73);color:white;}
 
-    </body>
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  font-size:25px;
+}
+label{
+  color:white;
+  font-size:20px;
+}
+h1{
+  color:white;
+  text-align:center;
+}
+
+select{
+  width:500px;
+  font-size:25px;
+  height:40px;
+}
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  font-size:25px;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+.container {
+  padding-left:500px;
+  padding-top:100px;
+  width:500px;
+  height:200px;
+}
+
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.psw {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+<h1>Vehicle Entry and Exit Form</h1>
+
+<form class="container" action="/action_page.php">
+
+    <label for="vehicle_no"><b>Vehicle No</b></label>
+    <input type="text" placeholder="Enter Vehicle No" name="vehicle_no" required>
+    <br>
+    <br>
+    <label for="purpose"><b>Purpose</b></label> <br><br>
+    <select name="purpose">
+    <option value="Daily">Daily</option>
+    <option value="Student">Student visit</option>
+    <option value="Official">Official visit</option>
+    <option value="Food delivery">Food Delivery</option>
+    <option value="Product delivery">Product Delivery</option>
+  </select>
+  <br>
+  <br>
+  <input type="radio"  name="status" value="Entered" checked>Entered<br>
+  <input type="radio"  name="status" value="Existed">Existed
+    <br><br><br><br>
+    <button type="submit">Submit</button>
+
+</form>
+
+</body>
 </html>
